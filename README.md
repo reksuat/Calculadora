@@ -4,3 +4,8 @@ Calculadora com Js
 - Multiplicação
 - Divisão
 - Porcentagem
+Funções de Área
+- Círculo
+- Triângulo
+- Retângulo
+Número perfeito
