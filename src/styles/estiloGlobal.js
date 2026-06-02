@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 const EstiloGlobal = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Roboto+Slab:wght@600;700&display=swap');
   * {
     margin: 0;
     padding: 0;
@@ -16,7 +17,7 @@ const EstiloGlobal = createGlobalStyle`
         h1 {font-size: 2rem;}
         h3 {font-size: 1.4rem;}
         h1, h3 {
-        color: ${(props) => props.theme.primária};
+        color: ${(props) => props.theme.primaria};
         font-family: 'Roboto Slab', serif;
         margin-bottom: 10px;
         text-align: center;
