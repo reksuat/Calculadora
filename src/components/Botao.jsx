@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const BotaoStyled = styled.button`
-  width: 100%;
+  width: 60%;
   background-color: ${(p) => p.theme.primaria};
   border: none;
   color: ${(p) => p.theme.text};
