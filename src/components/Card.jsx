@@ -11,7 +11,7 @@ const CardContainer = styled.div`
   text-align: center;
   transition: transform 0.2s ease;
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-2px);
   }
 `;
 const Titulo = styled.h3`
@@ -29,9 +29,10 @@ const Valor = styled.p`
 
 export const Secao = styled.section`
   width: 100%;
-  max-width: 500px;
-  margin: 20px auto;
-  padding: 0 20px;
+  max-width: 100%;
+  margin: 20px 0;
+  padding: 0;
+  flex: 1 1 320px;
 `;
 
 export const TituloSecao = styled.h3`
