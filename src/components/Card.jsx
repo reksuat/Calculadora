@@ -36,7 +36,7 @@ export const Secao = styled.section`
 `;
 
 export const TituloSecao = styled.h3`
-  color: ${(props) => props.theme.primaria};
+  color: ${(props) => props.theme.secundaria};
   text-transform: uppercase;
   padding-bottom: 8px;
   margin-bottom: 8px;
