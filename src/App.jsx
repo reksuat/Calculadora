@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import styled, { ThemeProvider } from "styled-components";
 import EstiloGlobal from "./styles/estiloGlobal";
 import { paleta } from "./styles/paleta";
@@ -8,6 +7,7 @@ import Input from "./components/Input";
 import ResultadoNum from "./components/ResultadoNum";
 import ResultadoString from "./components/ResultadoString";
 import { calcularEstatisticasStrings } from "./utils/estatisticasStrings";
+import { calcularEstatisticasNumericas } from "./utils/estatisticasNumericas";
 
 const ResultadosContainer = styled.div`
   display: flex;
@@ -37,11 +37,16 @@ function parsearEntrada(texto) {
 function App() {
   const [entrada, setEntrada] = useState("");
   const [dadosStrings, setDadosStrings] = useState({});
+  const [dadosNumeros, setDadosNumeros] = useState({});
 
   function calcular() {
     const dadosBrutos = parsearEntrada(entrada);
+    
     const statsStrings = calcularEstatisticasStrings(dadosBrutos);
     setDadosStrings(statsStrings);
+
+    const statsNumeros = calcularEstatisticasNumericas(dadosBrutos);
+    setDadosNumeros(statsNumeros);
   }
 
   return (
@@ -51,7 +56,7 @@ function App() {
         <Header />
         <Input entrada={entrada} setEntrada={setEntrada} calcular={calcular} />
         <ResultadosContainer>
-          <ResultadoNum />
+          <ResultadoNum dados={dadosNumeros} />
           <ResultadoString dados={dadosStrings} />
         </ResultadosContainer>
       </div>
